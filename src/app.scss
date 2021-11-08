@@ -7,10 +7,17 @@
         background-color: lightpink;
         position: relative;
         top: 70px; //height of navbar
+        scroll-behavior: smooth; //wont snap instantly when using navbar to navigate through sections, scrolls to appropriate section more smoothly
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; //get rid of scrollbar for firefox
+        &::-webkit-scrollbar{ //get rid of scrollbar for chrome
+            display: none;
+        }
 
         > *{
             width: 100vw;
             height: calc(100vh - 70px);
+            scroll-snap-align: start;
         }
 
     }
